@@ -28,24 +28,30 @@ header .logo img {
   width: 100%;
 }
 header nav .toggle {
-  display:none;
+  display:block; color:#fff; font-size:3rem; position: absolute;
+  top:-70px; right:30px;
 }
+header nav .toggle:hover + .gnb { display:block;}
 header nav {
   position: absolute;
   right: 100px;
   top: 30px;
 }
-
+header nav { position:absolute; right:0; left:0; top:100px; width:100%;
+z-index: 20;}
 
 .gnb {
-  width: 600px;
-  height: 40px;
+  width: 100%;
+  height: auto;
   display: flex;
+  flex-flow: column wrap;
   justify-content: space-between;
   align-items: center;
 }
 .gnb li {
   font-size: 1.4rem;
+  height: 40px; background-color: rgba(44,44,44,0.8);
+  line-height: 40px; padding-left: 30px; border-bottom: 1px solid #555; font-size:1.6rem;
 } /* 14px */
 .gnb li a {
   color: #fff;
@@ -302,7 +308,7 @@ footer .copyright .copytext {
 
 @media screen and (max-width:768px) { /*테블릿*/
 .inner { width:100%; }
-.gnb { display:none; }
+/* .gnb { display: block; } */
 header .logo { left:20px;}
 header nav { position:absolute; right:30px; top:30px; }
 header nav .toggle { display: block; color:#fff; font-size:3rem;
@@ -329,5 +335,8 @@ footer { padding: 50px 30px 0;}
     justify-items: center;}
 footer .btm_logo { display:none}
 footer .copyright .copytext { width: 100%;}
+}
+
+@media screen and (max-width:576px) {
 
 }
