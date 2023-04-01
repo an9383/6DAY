@@ -27,11 +27,15 @@ header .logo {
 header .logo img {
   width: 100%;
 }
+header nav .toggle {
+  display:none;
+}
 header nav {
   position: absolute;
   right: 100px;
   top: 30px;
 }
+
 
 .gnb {
   width: 600px;
@@ -294,4 +298,36 @@ footer .copyright .copytext {
   position: fixed;
   right: 30px;
   bottom: 50px;
+}
+
+@media screen and (max-width:768px) { /*테블릿*/
+.inner { width:100%; }
+.gnb { display:none; }
+header .logo { left:20px;}
+header nav { position:absolute; right:30px; top:30px; }
+header nav .toggle { display: block; color:#fff; font-size:3rem;
+position:absolute; }
+header .search { display:none;}
+#content { width: 100%;}
+.store_list {
+  height: auto;
+  justify-content: space-evenly;
+  }
+.store_list li {
+  width: 48%;
+  margin-bottom:10px;
+  }
+.card_list {
+    /* flex-flow: column; */
+    flex-flow: row wrap;
+     justify-content:space-evenly;}
+.card_list li { width:80%; margin-bottom: 20px;}
+footer { padding: 50px 30px 0;}
+.site_map dl { width:30%}
+.site_map dl:last-child { width:240px; margin-top: 20px;
+    /* margin-left: calc((100%-240px)/2); */
+    justify-items: center;}
+footer .btm_logo { display:none}
+footer .copyright .copytext { width: 100%;}
+
 }
